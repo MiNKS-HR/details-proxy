@@ -8,36 +8,46 @@ const port = process.env.PORT || 3000;
 app.use(morgan('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
 
-
-//Details: 3005
-const url5 = 'http://localhost:3005';
-app.get('/experience/details', (req, res) => {
-  const url = url5 + '/experience/details';
+//Reviews: 3001
+app.use('/reviews', (req, res) => {
+  const url = 'http://localhost:3001/reviews' + req.url;
   request(url).pipe(res);
 });
 
-app.get('/host/:name', (req, res) => {
-  const url = url5 + req.url;
+//Upcoming abailablity: 3002
+app.use('/experience/availableDate', (req, res) => {
+  const url = 'http://localhost:3002/experience/availableDate/' + req.url;
   request(url).pipe(res);
 });
 
 //Similar Experiences: 3003
-const url3 = 'http://localhost:3003';
-app.get('/id/:id', (req, res) => {
-  console.log(req.url);
-  const url = url3 + req.url;
+app.use('/experience/similar', (req, res) => {
+  const url = 'http://localhost:3003/experience/similar' + req.url;
   request(url).pipe(res);
 });
 
-app.get('/experience/similar/:id', function(req, res) {
-  const url = url3 + req.url;
+// Photo Gallery: 3004
+app.use('/images', (req, res) => {
+  const url = 'http://localhost:3004/images';
+  request(url).pipe(res);
+});
+app.use('/img', (req, res) => {
+  const url = 'http://localhost:3004/img' + req.url;
   request(url).pipe(res);
 });
 
-app.get('/experience/similar/location/:location', function(req, res) {
-  const url = url3 + req.url;
+//Details: 3005
+const url5 = 'http://localhost:3005';
+app.use('/experience/details', (req, res) => {
+  const url = url5 + '/experience/details';
   request(url).pipe(res);
 });
+
+app.use('/host/:name', (req, res) => {
+  const url = url5 + req.url;
+  request(url).pipe(res);
+});
+
 
 app.listen(port, () => {
   console.log(`server running at: http://localhost:${port}`)
