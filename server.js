@@ -13,6 +13,10 @@ app.use('/reviews', (req, res) => {
   const url = 'http://localhost:3001/reviews' + req.url;
   request(url).pipe(res);
 });
+app.use('/reviewsContent', (req, res) => {
+  const url = 'http://localhost:3001/reviewsContent' + req.url;
+  request(url).pipe(res);
+});
 
 //Upcoming abailablity: 3002
 app.use('/experience/availableDate', (req, res) => {
@@ -21,8 +25,8 @@ app.use('/experience/availableDate', (req, res) => {
 });
 
 //Similar Experiences: 3003
-app.use('/experience/similar', (req, res) => {
-  const url = 'http://localhost:3003/experience/similar' + req.url;
+app.use('/similar', (req, res) => {
+  const url = 'http://localhost:3003/similar' + req.url;
   request(url).pipe(res);
 });
 
@@ -37,14 +41,8 @@ app.use('/img', (req, res) => {
 });
 
 //Details: 3005
-const url5 = 'http://localhost:3005';
-app.use('/experience/details', (req, res) => {
-  const url = url5 + '/experience/details';
-  request(url).pipe(res);
-});
-
-app.use('/host/:name', (req, res) => {
-  const url = url5 + req.url;
+app.use('/details', (req, res) => {
+  const url = 'http://localhost:3005/details';
   request(url).pipe(res);
 });
 
