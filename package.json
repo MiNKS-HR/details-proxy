@@ -2,13 +2,14 @@
   "name": "AirEnE-Proxy",
   "version": "1.0.0",
   "description": "Proxy server for AirEnE HR Project",
-  "author": "amthjj sweenehhulz",
-  "license": "",
+  "author": "matthew sweeney",
+  "license": "UNLICENSED",
   "engines": {
     "node": ">=6.13.0"
   },
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "docker": "node server.js"
   },
   "dependencies": {
     "express": "^4.16.2",
