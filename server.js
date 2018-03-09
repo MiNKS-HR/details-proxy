@@ -23,7 +23,7 @@ app.use('/experience/availableDate', (req, res) => {
 
 //Similar Experiences: 3003
 app.use('/similar', (req, res) => {
-  const url = 'http://18.219.157.42:80/similar' + req.url;
+  const url = 'http://localhost:3003/similar' + req.url;
   request(url).pipe(res);
 });
 
@@ -39,7 +39,7 @@ app.use('/img', (req, res) => {
 
 //Details: 3005
 app.use('/details', (req, res) => {
-  const url = 'http://18.221.6.243:80/details' + req.url;
+  const url = 'http://localhost:3005/details' + req.url;
   request(url).pipe(res);
 });
 

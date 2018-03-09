@@ -1,8 +1,8 @@
 {
-  "name": "AirEnE-Proxy",
+  "name": "airene-proxy",
   "version": "1.0.0",
-  "description": "Proxy server for AirEnE HR Project",
-  "author": "amthjj sweenehhulz",
+  "description": "Proxy server for the AirEnE project",
+  "author": "Team MiNKS",
   "license": "",
   "engines": {
     "node": ">=6.13.0"
