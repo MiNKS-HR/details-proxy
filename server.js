@@ -4,16 +4,16 @@ const path = require('path');
 const request = require('request');
 const app = express();
 const port = process.env.PORT || 3000;
-
 app.use(morgan('dev'));
-app.use(express.static(path.join(__dirname, 'public')));
 
-//Reviews: 3001
+app.use('/', express.static(path.join(__dirname, 'public')));
+app.use('/:id',express.static(path.join(__dirname, 'public')));
+
+//Reviews
 app.use('/reviews', (req, res) => {
-  const url = 'http://localhost:3001/reviews' + req.url;
+  const url = 'http://54.153.115.227:80/reviews' + req.url;
   request(url).pipe(res);
 });
-
 
 //Upcoming abailablity: 3002
 app.use('/experience/availableDate', (req, res) => {
@@ -21,9 +21,9 @@ app.use('/experience/availableDate', (req, res) => {
   request(url).pipe(res);
 });
 
-//Similar Experiences: 3003
+//Similar Experiences
 app.use('/similar', (req, res) => {
-  const url = 'http://localhost:3003/similar' + req.url;
+  const url = 'http://13.57.186.250:80/similar' + req.url;
   request(url).pipe(res);
 });
 
@@ -37,9 +37,9 @@ app.use('/img', (req, res) => {
   request(url).pipe(res);
 });
 
-//Details: 3005
+//Details
 app.use('/details', (req, res) => {
-  const url = 'http://localhost:3005/details' + req.url;
+  const url = 'http://18.144.64.119:80/details' + req.url;
   request(url).pipe(res);
 });
 
