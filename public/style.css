@@ -1,3 +1,59 @@
+.header {
+  width: 100%;  
+}
+
+.footer {
+  width: 100%;
+}
+.simExpApp {
+  width: 1150px;
+  max-width: 2000px;
+}
+
+#proxy_top_container {
+  margin: 0 auto;
+  display: block;
+  width: 80%;
+}
+
+#proxy_top_container {
+}
+
+#details {
+  padding-left: 6px;
+  padding-bottom: 25px;
+  padding-top: 10px;
+  float: left;
+}
+
+.num-photos {
+  width: 300px;
+}
+
+#app2 {
+  max-width: 670;
+}
+
+#itemreviews {
+  max-width: 670px;
+  padding-left: 15px;
+}
+
+#gallery {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 125px;
+  margin-left: 162px;
+  float: left;
+}
+
+@media screen and (max-width: 1430px) {
+  #gallery {
+    position: inherit;
+    display:block;
+  }
+}
+
 .title {
   font-size:19px;
   line-height:24px;
@@ -9,7 +65,6 @@
 
 .page-container {
   padding-top:24px;
-  padding-left: 12px;
   padding-right: 12px;
 }
 
