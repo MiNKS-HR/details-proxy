@@ -6,7 +6,7 @@
   width: 100%;
 }
 .simExpApp {
-  width: 10px;
+  width: 1200px;
   max-width: 2000px;
 }
 
@@ -17,23 +17,24 @@
 }
 
 #details {
-  padding-left: 6px;
+  padding-left: 20px;
   padding-bottom: 25px;
   padding-top: 10px;
   float: left;
 }
 
+#availability {
+  position: relative;
+}
+
+
 .num-photos {
   width: 300px;
 }
 
-#app2 {
-  max-width: 670;
-}
 
 #itemreviews {
   max-width: 670px;
-  padding-left: 15px;
 }
 
 #gallery {

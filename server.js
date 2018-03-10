@@ -16,17 +16,18 @@ app.use('/reviews', (req, res) => {
 });
 
 //Upcoming abailablity: 3002
-app.use('/experience/availableDate', (req, res) => {
-  const url = 'http://localhost:3002/experience/availableDate/' + req.url;
+app.use('/availability', (req, res) => {
+  console.log(req.url);
+  const url = 'http://52.9.177.164:80/availability' + req.url;
   request(url).pipe(res);
 });
 
 //Similar Experiences
 app.use('/similar', (req, res) => {
-  const url = 'http://13.57.186.250:80/similar' + req.url;
-  request(url).pipe(res);
-});
 
+  const url = 'http://13.56.28.204:80/similar' + req.url;
+  request(url).pipe(res);
+});  
 // Photo Gallery: 3004
 app.use('/images', (req, res) => {
   const url = 'http://localhost:3004/images';
@@ -39,7 +40,7 @@ app.use('/img', (req, res) => {
 
 //Details
 app.use('/details', (req, res) => {
-  const url = 'http://18.144.64.119:80/details' + req.url;
+  const url = 'http://54.176.214.18:80/details' + req.url;
   request(url).pipe(res);
 });
 
